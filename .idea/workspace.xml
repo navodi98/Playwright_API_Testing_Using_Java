@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d42310be-24d3-4a18-8657-dd6ebe53b516" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/GETAPICall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/GETAPICall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/GETAPICall.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +54,24 @@
   }
 }]]></component>
   <component name="RunManager">
+    <configuration name="GETAPICall.getSpecificUserApiTest" type="TestNG" nameIsGenerated="true">
+      <module name="Playwright_API_Using_Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.api.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.api.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.GETAPICall" />
+      <option name="METHOD_NAME" value="getSpecificUserApiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GETAPICall.getUsersApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Playwright_API_Using_Java" />
       <extension name="coverage">
@@ -92,9 +105,19 @@
       <option name="presentableId" value="Default" />
       <updated>1788513046062</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1788527109460</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1788527109460</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>

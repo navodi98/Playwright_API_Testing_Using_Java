@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d42310be-24d3-4a18-8657-dd6ebe53b516" name="Changes" comment="Fetch response headers">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/APIResponseHeadersTest.java" afterDir="false" />
+    <list default="true" id="d42310be-24d3-4a18-8657-dd6ebe53b516" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/CreateUserPostCallTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1788601058453</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fetch response headers">
+      <created>1788692598183</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1788692598183</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

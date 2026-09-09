@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d42310be-24d3-4a18-8657-dd6ebe53b516" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/data/user.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/CreateUserWithJsonFileTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/CreateUserWithJsonStringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/data/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/CreateUserPostCallWithPOJOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/CreateUserPostCallTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/CreateUserPostCallTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
       <module name="Playwright_API_Using_Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qa.api.tests.*" />
+          <option name="PATTERN" value="com.api.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,7 +77,7 @@
       <module name="Playwright_API_Using_Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qa.api.tests.*" />
+          <option name="PATTERN" value="com.api.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,11 +90,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateUserWithJsonStringTest.createUserWithStringTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateUserWithJsonStringTest.createUserWithStringTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Playwright_API_Using_Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qa.api.tests.*" />
+          <option name="PATTERN" value="com.api.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,7 +112,7 @@
       <module name="Playwright_API_Using_Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qa.api.tests.*" />
+          <option name="PATTERN" value="com.api.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,7 +130,7 @@
       <module name="Playwright_API_Using_Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qa.api.tests.*" />
+          <option name="PATTERN" value="com.api.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,7 +148,7 @@
       <module name="Playwright_API_Using_Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qa.api.tests.*" />
+          <option name="PATTERN" value="com.api.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -217,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1788765005358</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="POST call with JSON String and JSON file">
+      <created>1788870598488</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1788870598488</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -227,7 +233,8 @@
     <MESSAGE value="Implemented Response Dispose Validation in Playwright API Tests" />
     <MESSAGE value="Fetch response headers" />
     <MESSAGE value="Implemented Playwright API POST Test for User Creation with Dynamic Email and GET Response Validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Playwright API POST Test for User Creation with Dynamic Email and GET Response Validation" />
+    <MESSAGE value="POST call with JSON String and JSON file" />
+    <option name="LAST_COMMIT_MESSAGE" value="POST call with JSON String and JSON file" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Playwright_API_Using_Java$CreateUserPostCallTest_createUserTest.ic" NAME="CreateUserPostCallTest.createUserTest Coverage Results" MODIFIED="1788860521807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d42310be-24d3-4a18-8657-dd6ebe53b516" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/data/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/CreateUserPostCallWithPOJOLombokTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/PUT/UpdateUserPUTCallWithLombokTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/APIDisposeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/GET/APIDisposeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/APIResponseHeadersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/GET/APIResponseHeadersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/CreateUserPostCallTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/POST/CreateUserPostCallTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/CreateUserPostCallWithPOJOLombokTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/POST/CreateUserPostCallWithPOJOLombokTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/CreateUserPostCallWithPOJOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/POST/CreateUserPostCallWithPOJOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/CreateUserWithJsonFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/POST/CreateUserWithJsonFileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/CreateUserWithJsonStringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/POST/CreateUserWithJsonStringTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/GETAPICall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/GET/GETAPICall.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +71,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.qa.api.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.CreateUserPostCallTest" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.POST.CreateUserPostCallTest" />
       <option name="METHOD_NAME" value="createUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -84,7 +89,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.qa.api.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.CreateUserWithJsonStringTest" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.POST.CreateUserWithJsonStringTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -101,7 +106,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.qa.api.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.CreateUserWithJsonStringTest" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.POST.CreateUserWithJsonStringTest" />
       <option name="METHOD_NAME" value="createUserWithStringTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -137,7 +142,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.qa.api.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.GETAPICall" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.GET.GETAPICall" />
       <option name="METHOD_NAME" value="getSpecificUserApiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -155,7 +160,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.qa.api.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.GETAPICall" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.GET.GETAPICall" />
       <option name="METHOD_NAME" value="getUsersApiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -231,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1788966966237</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="POST CALL with Lombok Library | POJO Class">
+      <created>1789031013658</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1789031013658</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -243,7 +255,8 @@
     <MESSAGE value="Implemented Playwright API POST Test for User Creation with Dynamic Email and GET Response Validation" />
     <MESSAGE value="POST call with JSON String and JSON file" />
     <MESSAGE value="POST CALL with POJO Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="POST CALL with POJO Class" />
+    <MESSAGE value="POST CALL with Lombok Library | POJO Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="POST CALL with Lombok Library | POJO Class" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Playwright_API_Using_Java$CreateUserPostCallTest_createUserTest.ic" NAME="CreateUserPostCallTest.createUserTest Coverage Results" MODIFIED="1788860521807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -1,4 +1,4 @@
-package com.qa.api.tests;
+package com.qa.api.tests.PUT;
 
 import com.api.data.User;
 import com.api.data.Users;
@@ -15,7 +15,15 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class CreateUserPostCallWithPOJOLombokTest {
+public class UpdateUserPUTCallWithLombokTest {
+
+
+    /*Flow
+        1. POST - fetch te user id --> 123
+        2. PUT - use the same user id --> /123
+        3. GET --> /123
+     */
+
 
     // Playwright API objects
     Playwright playwright;
@@ -47,7 +55,7 @@ public class CreateUserPostCallWithPOJOLombokTest {
     }
 
     @Test
-    public void createUserWithStringTest() throws IOException {
+    public void UpdateUserPUTCallWithLombokTest() throws IOException {
 
         // Generate a unique email
         String email = generateRandomEmail();
@@ -60,7 +68,7 @@ public class CreateUserPostCallWithPOJOLombokTest {
                 .status("active").build();
 
 
-
+        // 1. POST call --> create a user
         // Send a POST request to create a new user
         APIResponse apiPostResponse = requestContext.post(
                 "https://gorest.co.in/public/v2/users",
@@ -109,6 +117,67 @@ public class CreateUserPostCallWithPOJOLombokTest {
 
         // Verify that the server generated an ID for the new user
         Assert.assertNotNull(actualUser.getId());
+
+
+        String userID = actualUser.getId();
+        System.out.println("New user Id: " + userID);
+
+        // Update the status (active --> inactive)
+        users.setStatus("inactive");
+        // Update the name
+        users.setName("Taniya");
+
+        System.out.println("--------------------------------PUT CALL---------------------------------");
+
+        // 2. PUT call --> update the user
+        APIResponse apiPUTResponse = requestContext.put(
+                "https://gorest.co.in/public/v2/users/" + userID,
+                RequestOptions.create()
+                        .setHeader("Content-Type", "application/json")
+                        .setHeader(
+                                "Authorization",
+                                "Bearer 82d10ccf29029a3e8124f2280b32f3ceb2beac1dcb9370d10ae5f50f0e9b015b"
+                        )
+                        .setData(users)
+        );
+
+        System.out.println(apiPUTResponse.status() + ": " + apiPUTResponse.statusText());
+        // Validate the status
+        Assert.assertEquals(apiPUTResponse.status(), 200);
+
+        String putResponseText = apiPUTResponse.text();
+        Users actualPUTUser = objectMapper.readValue(putResponseText, Users.class);
+
+        System.out.println("Updated user: " + putResponseText);
+
+        Assert.assertEquals(actualPUTUser.getId(), userID);
+        Assert.assertEquals(actualPUTUser.getStatus(), users.getStatus());
+        Assert.assertEquals(actualPUTUser.getName(), users.getName());
+
+
+        // 3. get te updated user with GET call
+        APIResponse apiGETResponse = requestContext.get("https://gorest.co.in/public/v2/users/" + userID,
+                RequestOptions.create()
+                        .setHeader("Authorization", "Bearer 82d10ccf29029a3e8124f2280b32f3ceb2beac1dcb9370d10ae5f50f0e9b015b"));
+
+        // Get and print response status code
+        int statusCode = apiGETResponse.status();
+        System.out.println("Response code: " + statusCode);
+
+        // Verify status code is 200
+        Assert.assertEquals(statusCode, 200);
+
+        // Get and print status text
+        String statusGETStatusText = apiGETResponse.statusText();
+        System.out.println(statusGETStatusText);
+
+        String getResponseText = apiGETResponse.text();
+
+
+        Users actualGETUser = objectMapper.readValue(getResponseText, Users.class);
+        Assert.assertEquals(actualGETUser.getId(), userID);
+        Assert.assertEquals(actualGETUser.getStatus(), users.getStatus());
+        Assert.assertEquals(actualGETUser.getName(), users.getName());
     }
 
     @AfterTest
@@ -117,6 +186,7 @@ public class CreateUserPostCallWithPOJOLombokTest {
         // Close Playwright and release resources
         playwright.close();
     }
+
 
 
 }

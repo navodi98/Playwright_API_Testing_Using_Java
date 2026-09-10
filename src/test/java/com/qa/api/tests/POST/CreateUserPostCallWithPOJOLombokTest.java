@@ -1,6 +1,7 @@
-package com.qa.api.tests;
+package com.qa.api.tests.POST;
 
 import com.api.data.User;
+import com.api.data.Users;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.microsoft.playwright.APIRequest;
 import com.microsoft.playwright.APIRequestContext;
@@ -14,7 +15,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class CreateUserPostCallWithPOJOTest {
+public class CreateUserPostCallWithPOJOLombokTest {
 
     // Playwright API objects
     Playwright playwright;
@@ -46,18 +47,19 @@ public class CreateUserPostCallWithPOJOTest {
     }
 
     @Test
-    public void createUserWithStringTest() throws IOException {
+    public void CreateUserPostCallWithPOJOLombokTest() throws IOException {
 
         // Generate a unique email
         String email = generateRandomEmail();
 
-        // Create a User object with the test data
-        User user = new User(
-                "Sanduni QA",
-                email,
-                "female",
-                "active"
-        );
+        // Create a Users object : using builder pattern
+        Users users = Users.builder()
+                .name("Sanduni")
+                .email(email)
+                .gender("female")
+                .status("active").build();
+
+
 
         // Send a POST request to create a new user
         APIResponse apiPostResponse = requestContext.post(
@@ -68,7 +70,7 @@ public class CreateUserPostCallWithPOJOTest {
                                 "Authorization",
                                 "Bearer 82d10ccf29029a3e8124f2280b32f3ceb2beac1dcb9370d10ae5f50f0e9b015b"
                         )
-                        .setData(user)
+                        .setData(users)
         );
 
         // Print the response status code
@@ -100,10 +102,10 @@ public class CreateUserPostCallWithPOJOTest {
         System.out.println(actualUser);
 
         // Verify that the response contains the correct user details
-        Assert.assertEquals(actualUser.getName(), user.getName());
-        Assert.assertEquals(actualUser.getEmail(), user.getEmail());
-        Assert.assertEquals(actualUser.getStatus(), user.getStatus());
-        Assert.assertEquals(actualUser.getGender(), user.getGender());
+        Assert.assertEquals(actualUser.getName(), users.getName());
+        Assert.assertEquals(actualUser.getEmail(), users.getEmail());
+        Assert.assertEquals(actualUser.getStatus(), users.getStatus());
+        Assert.assertEquals(actualUser.getGender(), users.getGender());
 
         // Verify that the server generated an ID for the new user
         Assert.assertNotNull(actualUser.getId());
@@ -115,4 +117,6 @@ public class CreateUserPostCallWithPOJOTest {
         // Close Playwright and release resources
         playwright.close();
     }
+
+
 }

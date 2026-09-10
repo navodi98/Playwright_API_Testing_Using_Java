@@ -1,4 +1,4 @@
-package com.qa.api.tests;
+package com.qa.api.tests.POST;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,8 +13,10 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
-public class CreateUserWithJsonStringTest {
+public class CreateUserPostCallTest {
 
     // Playwright API objects
     Playwright playwright;
@@ -43,29 +45,24 @@ public class CreateUserWithJsonStringTest {
         return randomEmail;
     }
 
-
     @Test
-    public void createUserWithStringTest() throws IOException {
+    public void CreateUserPostCallTest() throws IOException {
 
-        // Generate a unique email
-        String email = generateRandomEmail();
-
-        // JSON request body
-        String requestJsonBody = "{\n" +
-                "  \"name\": \"Navodi QA\",\n" +
-                "  \"email\": \"" + email + "\",\n" +
-                "  \"gender\": \"female\",\n" +
-                "  \"status\": \"active\"\n" +
-                "}";
+        // Request body data
+        Map<String, Object> data = new HashMap<>();
+        data.put("name", "Navodi QA");
+        data.put("email", generateRandomEmail());
+        data.put("gender", "female");
+        data.put("status", "active");
 
         // Send POST request to create a new user
         APIResponse apiPostResponse = requestContext.post(
                 "https://gorest.co.in/public/v2/users",
                 RequestOptions.create()
-                        .setHeader("Content-Type", "application/json")
+                        .setHeader("Content-type", "application/json")
                         .setHeader("Authorization",
                                 "Bearer 82d10ccf29029a3e8124f2280b32f3ceb2beac1dcb9370d10ae5f50f0e9b015b")
-                        .setData(requestJsonBody)
+                        .setData(data)
         );
 
         // Verify user creation was successful
@@ -76,14 +73,15 @@ public class CreateUserWithJsonStringTest {
         // Print response body
         System.out.println(apiPostResponse.text());
 
-        // Convert JSON response into JsonNode
+        // Convert JSON response into JsonNode object
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode apiJsonResponse = objectMapper.readTree(apiPostResponse.body());
 
         // Print formatted JSON response
-        System.out.println(apiJsonResponse.toPrettyString());
+        String jsonPrettyResponse = apiJsonResponse.toPrettyString();
+        System.out.println(jsonPrettyResponse);
 
-        // Capture created user ID
+        // Capture created user ID from response
         String userID = apiJsonResponse.get("id").asText();
         System.out.println("User ID: " + userID);
 

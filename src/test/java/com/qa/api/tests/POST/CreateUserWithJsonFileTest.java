@@ -1,4 +1,4 @@
-package com.qa.api.tests;
+package com.qa.api.tests.POST;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -42,7 +42,7 @@ public class CreateUserWithJsonFileTest {
     }
 
     @Test
-    public void createUserWithJsonFileTest() throws IOException {
+    public void CreateUserWithJsonFileTest() throws IOException {
 
         // Read JSON file
         File file = new File("./src/test/data/user.json");

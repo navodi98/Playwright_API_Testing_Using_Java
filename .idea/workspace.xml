@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d42310be-24d3-4a18-8657-dd6ebe53b516" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/tests/DELETE/DeleteUserAPITest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/booking/BookingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/api/booking/TokenTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1789043166389</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="DELETE Call">
+      <created>1789109513155</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1789109513155</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -256,7 +264,8 @@
     <MESSAGE value="POST CALL with POJO Class" />
     <MESSAGE value="POST CALL with Lombok Library | POJO Class" />
     <MESSAGE value="PUT CALL | POJO Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="PUT CALL | POJO Class" />
+    <MESSAGE value="DELETE Call" />
+    <option name="LAST_COMMIT_MESSAGE" value="DELETE Call" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Playwright_API_Using_Java$CreateUserPostCallTest_createUserTest.ic" NAME="CreateUserPostCallTest.createUserTest Coverage Results" MODIFIED="1788860521807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
